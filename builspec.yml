@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo "Building resume website"
+      - # Add any build commands here
+artifacts:
+  files:
+    - '**/*'
