@@ -79,7 +79,7 @@ function createExperienceCards() {
 document.addEventListener('DOMContentLoaded', createExperienceCards);
 
 function updateVisitorCount() {
-    fetch('https://zapr2dk5t5.execute-api.us-east-1.amazonaws.com/deploy1/visitorcount')
+    fetch('https://vvih5eq651.execute-api.us-east-1.amazonaws.com/prod')
         .then(response => response.json())
         .then(data => {
             document.getElementById('visitor-count').textContent = data.count;
