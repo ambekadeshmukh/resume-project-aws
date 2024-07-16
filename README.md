@@ -40,6 +40,38 @@ Create an S3 Bucket:
 
 * Uncheck 'Block all public access' and acknowledge that the bucket will be public. This is necessary to allow public access to your resume website.
 
-https://lh7-us.googleusercontent.com/docsz/AD_4nXfB1XGqXh_BcF6bsmQKZVkzaMWf1prk9JPq6Et-inbhogmldaLZ0f14f_L3NcX_2U0suBFo4zwGmszEBCEYxZKveQJvR0tHT44Qx6DxmxYC4m8nKK6L0rfoF8extvGtN_vdx1LB0-qsdi2BTS8BAQJK3PhJ?key=auWrZl8YEp-Qdh0gHUTvhw
+![Blockpb](https://github.com/user-attachments/assets/ee55f91e-9d2f-45bd-8e30-8da8ddbffd61)
+
+* Click "Create bucket".
+
+## Enable Static Website Hosting:
+
+- Select your newly created bucket.
+
+- Go to the "Properties" tab.
+
+- Scroll down to "Static website hosting" and click "Edit".
+
+![webh](https://github.com/user-attachments/assets/61532ffb-4007-47fe-82b3-a46e51b6fc43)
+
+- Select "Enable" and specify index.html as the index document.
+
+- Optionally, specify an error document (e.g., error.html).
+
+- Click "Save changes".
+
+## Upload Files to S3:
+
+- Go to the "Objects" tab.
+
+- Click "Upload" and add your HTML, CSS, and JavaScript files.
+
+- Click "Upload".
+
+  ![upload](https://github.com/user-attachments/assets/4d937ba6-0c20-4e77-bb62-167f4226d3d3)
+
+
+
+
 
 
