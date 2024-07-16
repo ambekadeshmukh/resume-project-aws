@@ -35,3 +35,11 @@ Create an S3 Bucket:
 * Enter a unique bucket name (e.g., my-resume-website).
 
 ![createbucket](https://github.com/user-attachments/assets/25f199c2-c482-4583-97ce-f5789205a7ca)
+
+* Choose the appropriate region.
+
+* Uncheck 'Block all public access' and acknowledge that the bucket will be public. This is necessary to allow public access to your resume website.
+
+https://lh7-us.googleusercontent.com/docsz/AD_4nXfB1XGqXh_BcF6bsmQKZVkzaMWf1prk9JPq6Et-inbhogmldaLZ0f14f_L3NcX_2U0suBFo4zwGmszEBCEYxZKveQJvR0tHT44Qx6DxmxYC4m8nKK6L0rfoF8extvGtN_vdx1LB0-qsdi2BTS8BAQJK3PhJ?key=auWrZl8YEp-Qdh0gHUTvhw
+
+
