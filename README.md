@@ -70,7 +70,23 @@ Create an S3 Bucket:
 
   ![upload](https://github.com/user-attachments/assets/4d937ba6-0c20-4e77-bb62-167f4226d3d3)
 
+**Note:** Don’t forget to add your ‘headshot image’ that you want displayed on your resume page.
 
+- Configure Bucket Policy for Public Access:
+
+- Go to the "Permissions" tab.
+
+- Click on "Bucket policy" and add a policy to allow public reads:
+
+''' json
+
+"Version": "2012-10-17" ,
+"Statement": [
+"Sid": "PublicReadGetObject",
+"Effect": "Allow",
+"Principal": "*",
+"Action": "s3: GetObject"
+"Resource":
 
 
 
