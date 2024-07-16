@@ -7,8 +7,5 @@ This project demonstrates how to build a static resume website using AWS service
 
 The website displays a static resume and tracks visitor counts using DynamoDB. The visitor count is updated via a Lambda function invoked by API Gateway.
 
-## Prerequisites
 
-- AWS Account
-- AWS CLI
-- Node.js
+![Dynamic Online Resume AWS](https://github.com/user-attachments/assets/13803f13-eeab-4ec3-b928-13e3a26fd089)
