@@ -14,23 +14,24 @@ This project will guide you in creating a serverless, dynamic resume website lev
 
 ## Services Overview:
 
-Amazon S3 (Simple Storage Service): Used for hosting static website files.
+1. Amazon S3 (Simple Storage Service): Used for hosting static website files.
 
-Amazon CloudFront: A content delivery network (CDN) for fast global content distribution.
+2. Amazon CloudFront: A content delivery network (CDN) for fast global content distribution.
 
-Amazon DynamoDB: A NoSQL database to store and retrieve the visitor count.
+3. Amazon DynamoDB: A NoSQL database to store and retrieve the visitor count.
 
-AWS Lambda: A serverless compute service to run our backend code.
+4. AWS Lambda: A serverless compute service to run our backend code.
 
-Amazon API Gateway: Creates a RESTful API to connect the frontend with Lambda.
+5. Amazon API Gateway: Creates a RESTful API to connect the frontend with Lambda.
 
 ### Set Up S3 for Static Hosting
 
 Create an S3 Bucket:
 
-Go to the Amazon S3 console.
+* Go to the Amazon S3 console.
 
-Click "Create bucket".
+* Click "Create bucket".
 
-Enter a unique bucket name (e.g., my-resume-website).
+* Enter a unique bucket name (e.g., my-resume-website).
 
+![createbucket](https://github.com/user-attachments/assets/25f199c2-c482-4583-97ce-f5789205a7ca)
