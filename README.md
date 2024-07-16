@@ -78,7 +78,7 @@ Create an S3 Bucket:
 
 - Click on "Bucket policy" and add a policy to allow public reads:
 
-''' json
+``` json
 {
 "Version": "2012-10-17" ,
 "Statement": [
@@ -91,7 +91,7 @@ Create an S3 Bucket:
 }
 ]
 }
-'''
+```
 
 
 
