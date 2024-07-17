@@ -1,7 +1,7 @@
 
-# Static Resume Website
+# Dynamic Resume Website
 
-This project demonstrates how to build a static resume website using AWS services such as S3, CloudFront, DynamoDB, Lambda, and API Gateway.
+This project will guide you in creating a serverless, dynamic resume website leveraging various AWS services. This approach showcases your cloud skills and provides a practical example of AWS service integration, ultimately presenting your resume in a modern and scalable way.
 
 ## Description
 
