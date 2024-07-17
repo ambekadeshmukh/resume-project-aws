@@ -10,7 +10,6 @@ The website displays a static resume and tracks visitor counts using DynamoDB. T
 
 ![Dynamic Online Resume AWS](https://github.com/user-attachments/assets/13803f13-eeab-4ec3-b928-13e3a26fd089)
 
-This project will guide you in creating a serverless, dynamic resume website leveraging various AWS services. This approach showcases your cloud skills and provides a practical example of AWS service integration, ultimately presenting your resume in a modern and scalable way.
 
 ## Services Overview:
 
