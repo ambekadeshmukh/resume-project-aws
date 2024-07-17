@@ -92,6 +92,96 @@ Create an S3 Bucket:
     ]
 }
 ```
+- Replace "your-bucket-name" with your actual bucket name.
+
+- Click "Save changes".
+
+**Set Up CloudFront Distribution**
+
+-Create CloudFront Distribution:
+
+-Go to the CloudFront console (https://console.aws.amazon.com/cloudfront/).
+
+-Click "Create Distribution".
+
+-For "Origin Domain", select your S3 bucket's website endpoint.
+
+![dist](https://github.com/user-attachments/assets/d9278748-de9c-4f5c-ab34-91dfd94efb37)
+
+
+-For "Viewer protocol policy", choose "Redirect HTTP to HTTPS".
+
+-Leave other settings as default.
+
+-Click "Create distribution".
+
+-Note the "Distribution domain name" for later use.
+
+**Set Up DynamoDB for Visitor Count**
+
+-Create a DynamoDB Table:
+
+-Go to the DynamoDB console (https://console.aws.amazon.com/dynamodb/).
+
+-Click "Create table".
+
+-Enter "VisitorCount" as the table name.
+
+-Set the partition key to "VisitorID" (type: String).
+
+-Click "Create".
+
+![table](https://github.com/user-attachments/assets/e697fc89-28de-4cf8-9a46-41958989f4a1)
+
+**Create a Lambda Function**
+
+-Set Up the Lambda Function:
+
+-Go to Lambda in AWS Console.
+
+-Click "Create function".
+
+-Choose "Author from scratch".
+
+-Set "Function name" to "updateVisitorCount".
+
+-Select "Python 3.9" for Runtime.
+
+-Under "Permissions", choose "Create a new role with basic Lambda permissions".
+
+-Click "Create function".
+
+![func](https://github.com/user-attachments/assets/6bb308f5-1bf5-4fb9-a792-cd44df67b500)
+
+**Add Function Code:**
+
+In the function code area, paste the following Python code:
+
+``` python
+import json
+import boto3
+dynamodb = boto3. resource ('dynamodb' )
+table = dynamodb. Table( 'visitor-count')
+
+def lambda_handler (event, context) :
+    response = table-get_item(Key={'id': 'visitors'})
+    count = responsel 'Item']['count'] if 'Item' in response else 0
+    count += 1
+
+    table-put_item(Item={'id': 'visitors', 'count': count})
+
+    return {
+          'statusCode': 200,
+          'headers': {
+             'Access-Control-Allow-Origin': '*'
+          ｝，
+          'body': json. dumps ({'count': count})
+}
+```
+
+
+
+
 
 
 
