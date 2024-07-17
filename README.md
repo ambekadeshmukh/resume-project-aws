@@ -97,58 +97,58 @@ Create an S3 Bucket:
 
 **Set Up CloudFront Distribution**
 
--Create CloudFront Distribution:
+- Create CloudFront Distribution:
 
--Go to the CloudFront console (https://console.aws.amazon.com/cloudfront/).
+- Go to the CloudFront console (https://console.aws.amazon.com/cloudfront/).
 
--Click "Create Distribution".
+- Click "Create Distribution".
 
--For "Origin Domain", select your S3 bucket's website endpoint.
+- For "Origin Domain", select your S3 bucket's website endpoint.
 
 ![dist](https://github.com/user-attachments/assets/d9278748-de9c-4f5c-ab34-91dfd94efb37)
 
 
--For "Viewer protocol policy", choose "Redirect HTTP to HTTPS".
+- For "Viewer protocol policy", choose "Redirect HTTP to HTTPS".
 
--Leave other settings as default.
+- Leave other settings as default.
 
--Click "Create distribution".
+- Click "Create distribution".
 
--Note the "Distribution domain name" for later use.
+- Note the "Distribution domain name" for later use.
 
 **Set Up DynamoDB for Visitor Count**
 
--Create a DynamoDB Table:
+- Create a DynamoDB Table:
 
--Go to the DynamoDB console (https://console.aws.amazon.com/dynamodb/).
+- Go to the DynamoDB console (https://console.aws.amazon.com/dynamodb/).
 
--Click "Create table".
+- Click "Create table".
 
--Enter "VisitorCount" as the table name.
+- Enter "VisitorCount" as the table name.
 
--Set the partition key to "VisitorID" (type: String).
+- Set the partition key to "VisitorID" (type: String).
 
--Click "Create".
+- Click "Create".
 
 ![table](https://github.com/user-attachments/assets/e697fc89-28de-4cf8-9a46-41958989f4a1)
 
 **Create a Lambda Function**
 
--Set Up the Lambda Function:
+- Set Up the Lambda Function:
 
--Go to Lambda in AWS Console.
+- Go to Lambda in AWS Console.
 
--Click "Create function".
+- Click "Create function".
 
--Choose "Author from scratch".
+- Choose "Author from scratch".
 
--Set "Function name" to "updateVisitorCount".
+- Set "Function name" to "updateVisitorCount".
 
--Select "Python 3.9" for Runtime.
+- Select "Python 3.9" for Runtime.
 
--Under "Permissions", choose "Create a new role with basic Lambda permissions".
+- Under "Permissions", choose "Create a new role with basic Lambda permissions".
 
--Click "Create function".
+- Click "Create function".
 
 ![func](https://github.com/user-attachments/assets/6bb308f5-1bf5-4fb9-a792-cd44df67b500)
 
@@ -269,11 +269,11 @@ For Integration type, select "Lambda Function".
 
 In the "Enable CORS" form that appears:
 
-    For "Access-Control-Allow-Headers", enter: 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'
+  - For "Access-Control-Allow-Headers", enter: 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'
 
-    For "Access-Control-Allow-Methods", ensure that GET is checked (along with any other methods you need).
+  - For "Access-Control-Allow-Methods", ensure that GET is checked (along with any other methods you need).
 
-    For "Access-Control-Allow-Origin", enter '*' (or your specific domain if you want to restrict access).
+  - For "Access-Control-Allow-Origin", enter '*' (or your specific domain if you want to restrict access).
 
 Leave the other settings as default unless you have specific requirements.
 
@@ -330,6 +330,7 @@ In your index.html, add somewhere appropriate:
 ``` html
 <p>Visitor count: <span id="visitor-count">0</span></p>
 ```
+
 Re-upload the updated index.html and script.js to your S3 bucket
 
 **Test Your Website**
@@ -346,11 +347,11 @@ Re-upload the updated index.html and script.js to your S3 bucket
 
 If you encounter any issues during testing, do the following:
 
-    If content is missing or incorrectly formatted, you may need to review and update your HTML and CSS files, then re-upload them to your S3 bucket.
+  - If content is missing or incorrectly formatted, you may need to review and update your HTML and CSS files, then re-upload them to your S3 bucket.
 
-    If the visitor count isn't increasing, check your Lambda function logs in AWS CloudWatch for any errors.
+  - If the visitor count isn't increasing, check your Lambda function logs in AWS CloudWatch for any errors.
 
-    If the page doesn't load at all, verify that your S3 bucket permissions and CloudFront distribution settings are correct.
+  - If the page doesn't load at all, verify that your S3 bucket permissions and CloudFront distribution settings are correct.
 
 Remember, after making any changes to your S3 bucket contents, you may need to invalidate your CloudFront cache to see the changes immediately. You can do this in the CloudFront console by creating an invalidation for "/*".
 
